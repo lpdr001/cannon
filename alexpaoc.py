@@ -17,6 +17,7 @@ def tap(x, y):
         speed.x = (x + 200) / 25
         speed.y = (y + 200) / 25
 
+   
 def inside(xy):
     "Return True if xy within screen."
     return -200 < xy.x < 200 and -200 < xy.y < 200
@@ -42,6 +43,7 @@ def move():
         target = vector(200, y)
         targets.append(target)
 
+        """ Apartir de estas lineas se cambian la velocidad de los proyectiles """
     for target in targets:
         target.x -= 0.5 * velocidad
 
@@ -57,7 +59,7 @@ def move():
             targets.append(target)
 
     draw()
-
+   """Aquí se cambia el valor de target para que regresen al origen """
     for target in targets:
         if not inside(target):
             target.x = 200
