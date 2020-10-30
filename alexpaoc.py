@@ -5,8 +5,8 @@ from freegames import vector
 ball = vector(-200, -200)
 speed = vector(0, 0)
 targets = []
-print ("1 es normal")
-velocidad = float (input("Ingrese la velcidad: "))
+#Se crea una variable para la cual el usuario tendrá que ingresar
+velocidad = float (input("Ingrese la velocidad: "))
 
 
 def tap(x, y):
@@ -41,7 +41,7 @@ def move():
         y = randrange(-150, 150)
         target = vector(200, y)
         targets.append(target)
-
+#Se multiplica por la variable "velocidad" para que vaya más rápido
     for target in targets:
         target.x -= 0.5 * velocidad
 
